@@ -20,8 +20,9 @@ def test_services_list_for_region(page, region):
     product_page.open(region)
     product_page.open_services()
 
-    ui_services = services_page.get_services_in_container("get_services_in_container")
+    ui_services = services_page.get_services_in_container("продукты билайна")
 
     expected_services = get_dop_services(region)
+    print("Собранный из контейнера:", ui_services)
 
     assert set(ui_services) == set(expected_services)

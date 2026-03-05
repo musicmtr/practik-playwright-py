@@ -1,5 +1,6 @@
 from components.services_section import ServicesSection
 
+
 class ServicePage:
 
     def __init__(self, page):
@@ -22,7 +23,7 @@ class ServicePage:
         container = title.locator("xpath=../../..")
         titles = container.locator("h4")
 
-        return [t.strip().lower() for t in titles.all_text_content]
+        return [t.strip().lower() for t in titles.all_text_contents()]
 
     # def get_section_by_title(self, title):
     #     sections = self.get_sections()
