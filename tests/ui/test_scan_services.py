@@ -3,6 +3,7 @@ import pytest
 from pages.products_page import ProductsPage
 from pages.services_page import ServicePage
 from test_data.services_data import get_dop_services
+from playwright.sync_api import expect
 
 
 @pytest.mark.parametrize(
